@@ -3,7 +3,7 @@ name: Daily Stock Analysis
 on:
   schedule:
     # Her gün sabah 20:00'da çalışacak (UTC+3 için 06:00 UTC)
-    - cron: '1 7 * * 1-5'  # Pazartesiden Cumaya
+    - cron: '0 17 * * 1-5'  # Pazartesiden Cumaya
   workflow_dispatch:  # Manuel tetikleme için
 
 jobs:
