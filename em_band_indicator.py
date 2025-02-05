@@ -60,11 +60,11 @@ def calculate_bands(df, sma_period=100, atr_period=500,
             df.iloc[i, df.columns.get_loc('bosc')] = 2
         elif close > upper1:
             df.iloc[i, df.columns.get_loc('bosc')] = 1
-        elif close > lower1:
+        elif close >= lower1 and close <= upper1:
             df.iloc[i, df.columns.get_loc('bosc')] = 0
-        elif close > lower2:
+        elif close < lower1 and close > lower2:
             df.iloc[i, df.columns.get_loc('bosc')] = -1
-        elif close > lower3:
+        elif close < lower2 and close > lower3:
             df.iloc[i, df.columns.get_loc('bosc')] = -2
         else:
             df.iloc[i, df.columns.get_loc('bosc')] = -3
