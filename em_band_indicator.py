@@ -11,7 +11,7 @@ MAILJET_API_SECRET = '77ebf1b85ad4771ec0597c07df9e5a31'
 FROM_EMAIL = 'gsorkanozmen@hotmail.com'
 TO_EMAIL = 'gsorkanozmen@gmail.com'
 
-def calculate_bands(df, sma_period=10, atr_period=10, 
+def calculate_bands(df, sma_period=100, atr_period=500, 
                    atr_multiplier1=3.2, atr_multiplier2=6.4, atr_multiplier3=9.5):
     # Copy DataFrame to avoid SettingWithCopyWarning
     df = df.copy()
