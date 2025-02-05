@@ -144,7 +144,7 @@ def send_email(subject, body):
 def main():
     # Tarihleri ayarla
     today = datetime.now()
-    start_date = (today - pd.Timedelta(days=30)).strftime('%Y-%m-%d')  # Son 30 günlük veri
+    start_date = (today - pd.Timedelta(days=500)).strftime('%Y-%m-%d')  # Son 500 günlük veri
     end_date = today.strftime('%Y-%m-%d')
     
     # Hisse listesini oku
